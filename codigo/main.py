@@ -1,13 +1,3 @@
-"""
-Coleta de dados do GitHub usando GraphQL
-RQ4, RQ5, RQ6
----------------------------------
-RQ4: Percentual de issues fechadas
-RQ5: Linguagem principal do repositório
-RQ6: Data da última atualização
----------------------------------
-"""
-
 import requests
 import json
 
@@ -70,4 +60,5 @@ def main():
         print(f"Erro {response.status_code}: {response.text}")
 
 if __name__ == "__main__":
+
     main()
