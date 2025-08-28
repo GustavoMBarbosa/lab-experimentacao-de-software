@@ -85,7 +85,6 @@ def sumarizar_globais(repos: List[RepoRow]) -> Dict[str, Optional[float]]:
         "RQ02_PRsMes_mediana": mediana_suave([r.prs_mes for r in repos]),
         "RQ03_ReleasesMes_mediana": mediana_suave([r.releases_mes for r in repos]),
         "RQ04_DiasDesdeAtualizacao_mediana": mediana_suave([r.dias_desde_update for r in repos]),
-        # RQ05 é categórica (contagem de linguagem)
         "RQ06_PctIssuesFechadas_mediana": mediana_suave([r.pct_issues_fechadas for r in repos]),
     }
 
@@ -158,11 +157,11 @@ def main():
     # RQ05 — contagem por linguagem
     cont = contagem_linguagens(repos)
 
-    # Bônus — RQ07 por linguagem (Top-N populares por contagem)
+    # RQ07 — por linguagem (Top-N populares por contagem)
     populares, por_ling = rq07_por_linguagem(repos, top_n=TOP_N_POP_LANGS)
     salvar_rq07_csv(populares, por_ling, RQ07_CSV)
 
-    print(f"OK! Gerados:\n- {RELATORIO_MD}\n- {SUMARIO_CSV}\n- {RQ07_CSV}")
+    print(f"OK! Gerados:\n- {SUMARIO_CSV}\n- {RQ07_CSV}")
 
 if __name__ == "__main__":
     main()

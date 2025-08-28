@@ -1,5 +1,10 @@
 # Laboratório 01 — Características de repositórios populares
-## Introdução e hipóteses informais
+
+## Introdução geral
+Os repositórios open-source mais populares do GitHub concentram grande parte do esforço colaborativo da comunidade de desenvolvimento. Analisar suas características fornece indícios sobre práticas de manutenção, frequência de contribuição, estratégias de releases, governança de issues e adoção de linguagens de programação.  
+Neste relatório, buscamos investigar essas propriedades a partir da coleta e análise dos 1.000 repositórios com maior número de estrelas no GitHub. A análise foi guiada por questões de pesquisa específicas (RQs), para as quais elaboramos hipóteses informais e as confrontamos com os dados obtidos.
+
+## Hipóteses
 - **RQ01 (Idade em meses):** espera-se mediana relativamente alta, indicando que repositórios populares tendem a ser maduros.
 - **RQ02 (PRs/mês):** espera-se mediana > 0, sugerindo fluxo contínuo de contribuições externas.
 - **RQ03 (Releases/mês):** espera-se uma mediana baixa porém positiva, pois muitos projetos fazem releases mensais ou trimestrais.
@@ -53,7 +58,7 @@ Total de repositórios analisados: **1000**
 
 ---
 
-## Bônus — RQ07 por linguagem
+## RQ07 — por linguagem
 Comparamos PRs/mês, Releases/mês e dias desde a última atualização por linguagem, considerando as 10 linguagens com mais repositórios.
 
 | Linguagem | PRs/mês (mediana) | Releases/mês (mediana) | Dias desde última atualização (mediana) |
@@ -70,3 +75,7 @@ Comparamos PRs/mês, Releases/mês e dias desde a última atualização por ling
 | Jupyter Notebook | 1.71 | 0.00 | 0.00 |
 
 **Discussão:** contrariando o que pensávamos, o número de PRs/mês, releases/mês e dias desde a última atualização não se distribui uniformemente de acordo com a popularidade das linguagens. Por exemplo, esperáva-mos que python, por ser a mais popular, seria a maior nas três categorias, e que o número de cada uma cairia proporcionalmente, mas observamos que é mais irregular do que o teorizado.
+
+## Conclusão
+A análise dos 1.000 repositórios mais populares do GitHub mostrou que esses projetos tendem a ser maduros, bem mantidos e ativos em termos de contribuição da comunidade e gestão de issues. Em geral, as hipóteses informais foram confirmadas, especialmente no que diz respeito à maturidade, à alta taxa de issues fechadas e ao domínio de linguagens amplamente difundidas, como Python e JavaScript.  
+Entretanto, observou-se que a dinâmica de contribuições e releases varia consideravelmente entre linguagens, contrariando a expectativa de uma relação proporcional à sua popularidade. Esses achados reforçam a importância de análises empíricas para compreender o ecossistema open-source, pois nem sempre a percepção inicial corresponde à realidade observada nos dados.
