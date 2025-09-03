@@ -18,4 +18,5 @@
 4. Instalar a biblioteca dentro do ambiente virtual:
    ```bash
    pip install requests
+   pip install matplotlib 
    ```
